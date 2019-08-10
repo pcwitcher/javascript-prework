@@ -29,17 +29,17 @@ const game = function () {
             }
         }
 
-        const randomNumber = Math.floor(Math.random() * 3 + 1);
+        let randomNumber = Math.floor(Math.random() * 3 + 1);
 
         console.log('Wylosowana liczba to: ' + randomNumber);
 
-        const computerMove = getMoveName(randomNumber);
+        let computerMove = getMoveName(randomNumber);
 
         printMessage('Kompa ruch to: ' + computerMove);
 
         console.log('Gracz wybrał: ' + playerInput);
 
-        const playerMove = getMoveName(playerInput);
+        let playerMove = getMoveName(playerInput);
 
         printMessage('Gracza ruch to: ' + playerMove);
 
