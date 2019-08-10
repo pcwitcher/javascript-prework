@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 const game = function () {
 
     const playGame = function (playerInput) {
@@ -15,18 +18,24 @@ const game = function () {
         }
 
         const displayResult = function (argComputerMove, argPlayerMove) {
-            console.log('wystartowała funkcja displayResults: ' + argPlayerMove + ', ' + argComputerMove);
             if (argComputerMove === 'kamień' && argPlayerMove === 'papier') {
                 printMessage('Ty wygrywasz!');
+                playerScore++;
+
             } else if (argComputerMove === 'nożyce' && argPlayerMove === 'kamień') {
                 printMessage('Ty wygrywasz!');
+                playerScore++;
             } else if (argComputerMove === 'papier' && argPlayerMove === 'nożyce') {
                 printMessage('Ty wygrywasz!');
+                playerScore++;
             } else if (argComputerMove === argPlayerMove) {
                 printMessage('Remis');
             } else {
                 printMessage('Ty przegrywasz!');
+                computerScore++;
             }
+            printMessage('Wynik Gracza: ' + playerScore + ' Komp: ' + computerScore);
+            console.log('Gracz: ' + playerScore + ' Komp: ' + computerScore);
         }
 
         const randomNumber = Math.floor(Math.random() * 3 + 1);
